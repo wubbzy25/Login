@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Main Title Icon -->
+    <link rel="icon" type="image/gif/png" href="./images/Main Tab Image-Logo.png">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="containter">
+        <div class="bluebg">
+            <div class="box signin">
+                <!-- Sign In Button -->
+                <h2>Already Have an Account?</h2>
+                <button class="signinbtn">Sign In
+                </button>
+            </div>
+            <div class="box signup">
+                <!-- Sign Up Button -->
+                <h2>Don't Have an Account?</h2>
+                <button class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <!------------ Slider ------------->
+            <div class="form signinForm">
+                <!-- Sign In Form -->
+                <form method="post">
+                    <i class='bx bx-log-in signinimage'></i>
+                    <h3>Sign In</h3>
+                    <input type="text" placeholder=" Username or Gmail"  name="useroremail"  required>
+                    <input type="password" placeholder=" Password" name="contraseña" required>
+                    <input type="submit" value="Login" id="button-login" >
+                    <% if(error === "❌ The password is not correct" || error === "❌ The user is not registered") {%><%= error%><%}%>
+                    <a href="#" class="forgot">Forgot Password?</a>
+                </form>
+            </div>
+            <div class="form signupForm">
+                <!-- Sign Up Form -->
+                <form method="post">
+                    <i class='bx bxs-user signupimage'></i>
+                    <h3>Sign Up</h3>
+                    <input type="text" placeholder=" Username" name="username" required>
+                    <input type="email" placeholder=" Email Address" name="gmail" required>
+                    <input type="password" placeholder=" Password" name="password" required>
+                    <input type="password" placeholder=" Confirm Password" name="confirmpassword" required>
+                    <input type="submit" value="Register" id="button-register">
+                  <% if(error === "❌ User Already Register" ||  error ==="❌ Gmail Already Register" ||  error === "❌ Passwords do not match" ) {%><%= error%><%}%>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
